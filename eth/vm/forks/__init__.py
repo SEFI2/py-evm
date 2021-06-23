@@ -31,3 +31,6 @@ from .berlin import (  # noqa: F401
 from .simple import (  # noqa: F401
     SimpleVM,
 )
+from .nogas import (  # noqa: F401
+    NogasVM,
+)
