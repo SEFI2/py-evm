@@ -5,7 +5,7 @@ from eth_typing import Address
 from eth.consensus.pow import mine_pow_nonce
 from eth import constants, chains
 ## Seoul VM is used here
-from eth.vm.forks.byzantium import ByzantiumVM
+from eth.vm.forks.simple import SimpleVM
 from eth.db.atomic import AtomicDB
 
 
@@ -43,7 +43,7 @@ GENESIS_STATE = {
 klass = chains.base.MiningChain.configure(
     __name__='TestChain',
     vm_configuration=(
-        (constants.GENESIS_BLOCK_NUMBER, ByzantiumVM),
+        (constants.GENESIS_BLOCK_NUMBER, SimpleVM),
     )
 )
 
